@@ -39,8 +39,8 @@ public class TurmaDAO {
     public static List<Turma> obterTurmas() throws ClassNotFoundException, SQLException {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
-        //List<Turma> turmas = session.createCriteria(Turma.class).list();
-        List<Turma> turmas = session.createQuery("from Turma").list();
+        List<Turma> turmas = session.createCriteria(Turma.class).list();
+        session.close();
         return turmas;
     }
 }

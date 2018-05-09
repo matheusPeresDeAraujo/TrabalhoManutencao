@@ -11,6 +11,7 @@ public class DisciplinaDao {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<Disciplina> disciplinas = session.createCriteria(Disciplina.class).list();
+        session.close();
         return disciplinas;
     }
     
