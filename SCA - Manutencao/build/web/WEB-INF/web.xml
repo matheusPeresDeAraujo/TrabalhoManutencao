@@ -77,10 +77,6 @@
         <servlet-class>controller.ManterMatriculaController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ManterMatriculaController</servlet-name>
-        <servlet-class>controller.ManterMatriculaController</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>PesquisarMatrizCurricularController</servlet-name>
         <servlet-class>controller.PesquisarMatrizCurricularController</servlet-class>
     </servlet>
