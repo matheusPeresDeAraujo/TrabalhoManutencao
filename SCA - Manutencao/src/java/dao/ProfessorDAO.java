@@ -4,6 +4,7 @@
  */
 package dao;
 
+import util.HibernateUtil;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,7 +15,6 @@ import java.util.List;
 import model.Professor;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import util.HibernateUtil;
 
 /**
  *

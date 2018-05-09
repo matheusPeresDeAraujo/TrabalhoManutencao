@@ -1,12 +1,12 @@
 package dao;
 
+import util.HibernateUtil;
 import java.sql.SQLException;
 import java.util.List;
 import model.Horario;
 import model.Professor;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import util.HibernateUtil;
 
 public class HorarioDAO {
 

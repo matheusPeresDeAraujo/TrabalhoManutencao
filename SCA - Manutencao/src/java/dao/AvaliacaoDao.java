@@ -1,12 +1,12 @@
 package dao;
 
+import util.HibernateUtil;
 import java.sql.SQLException;
 import java.util.List;
 import model.Avaliacao;
 import model.AvaliacaoId;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import util.HibernateUtil;
 
 public class AvaliacaoDao {
 
