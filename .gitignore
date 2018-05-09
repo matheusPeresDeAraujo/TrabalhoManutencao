@@ -12,7 +12,9 @@
 hs_err_pid*
 
 #Build
+*/build/*
 */build
 
 #Nbproject
+*/nbproject/*
 */nbproject
