@@ -1,5 +1,6 @@
 package model;
 
+import dao.AlunoDao;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.HashSet;
@@ -264,23 +265,23 @@ public class Aluno implements java.io.Serializable {
     public void setAvaliacaos(Set<Avaliacao> avaliacaos) {
         this.avaliacaos = avaliacaos;
     }
-//
-//    public static List<Aluno> obterAlunos() throws ClassNotFoundException, SQLException {
-//        return AlunoDao.obterAlunos();
-//    }
-//    public static List<Aluno> obterAlunosPorNome(String nome) throws ClassNotFoundException, SQLException {
-//        return AlunoDao.obterAlunosPorNome(nome);
-//    }
-//    public static Aluno obterAluno(int matricula) throws ClassNotFoundException, SQLException {
-//        return AlunoDao.obterAluno(matricula);
-//    }
-//    public void gravar() throws SQLException, ClassNotFoundException {
-//        AlunoDao.gravarAluno(this);
-//    }
-//    public void editar() throws SQLException, ClassNotFoundException {
-//        AlunoDao.editarAluno(this);
-//    }
-//    public void excluir() throws SQLException, ClassNotFoundException {
-//        AlunoDao.excluirAluno(this);
-//    }
+
+    public static List<Aluno> obterAlunos() throws ClassNotFoundException, SQLException {
+        return AlunoDao.obterAlunos();
+    }
+    public static List<Aluno> obterAlunosPorNome(String nome) throws ClassNotFoundException, SQLException {
+        return AlunoDao.obterAlunosPorNome(nome);
+    }
+    public static Aluno obterAluno(int matricula) throws ClassNotFoundException, SQLException {
+        return AlunoDao.obterAluno(matricula);
+    }
+    public void gravar() throws SQLException, ClassNotFoundException {
+        AlunoDao.gravarAluno(this);
+    }
+    public void editar() throws SQLException, ClassNotFoundException {
+        AlunoDao.editarAluno(this);
+    }
+    public void excluir() throws SQLException, ClassNotFoundException {
+        AlunoDao.excluirAluno(this);
+    }
 }

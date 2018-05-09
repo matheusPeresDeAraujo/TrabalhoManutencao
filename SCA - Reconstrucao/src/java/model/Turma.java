@@ -1,6 +1,7 @@
 package model;
 // Generated 27/05/2013
 
+import dao.TurmaDAO;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.List;
@@ -134,28 +135,28 @@ public class Turma implements java.io.Serializable {
     public void setHorarios(Set<Horario> horarios) {
         this.horarios = horarios;
     }
-//
-//    public static List<Turma> obterTurmas() throws ClassNotFoundException, SQLException {
-//        return TurmaDAO.obterTurmas();
-//    }
-//
-//    public static Turma obterTurma(int codTurma) throws ClassNotFoundException, SQLException {
-//        return TurmaDAO.obterTurma(codTurma);
-//    }
-//
-//    public void setCodTurma(int codTurma) {
-//        this.codTurma = codTurma;
-//    }
-//
-//    public void gravar() throws ClassNotFoundException, SQLException {
-//        TurmaDAO.gravar(this);
-//    }
-//
-//    public void alterar() throws ClassNotFoundException, SQLException {
-//        TurmaDAO.alterar(this);
-//    }
-//
-//    public void excluir() throws ClassNotFoundException, SQLException {
-//        TurmaDAO.excluir(this);
-//    }
+
+    public static List<Turma> obterTurmas() throws ClassNotFoundException, SQLException {
+        return TurmaDAO.obterTurmas();
+    }
+
+    public static Turma obterTurma(int codTurma) throws ClassNotFoundException, SQLException {
+        return TurmaDAO.obterTurma(codTurma);
+    }
+
+    public void setCodTurma(int codTurma) {
+        this.codTurma = codTurma;
+    }
+
+    public void gravar() throws ClassNotFoundException, SQLException {
+        TurmaDAO.gravar(this);
+    }
+
+    public void alterar() throws ClassNotFoundException, SQLException {
+        TurmaDAO.alterar(this);
+    }
+
+    public void excluir() throws ClassNotFoundException, SQLException {
+        TurmaDAO.excluir(this);
+    }
 }

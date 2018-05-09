@@ -1,4 +1,5 @@
 package model;
+import dao.DisciplinaDao;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.List;
@@ -146,36 +147,36 @@ public class Disciplina implements java.io.Serializable {
     public void setDisciplinasForCodDisciplinaPreRequisitada(Set<Disciplina> disciplinasForCodDisciplinaPreRequisitada) {
         this.disciplinasForCodDisciplinaPreRequisitada = disciplinasForCodDisciplinaPreRequisitada;
     }
-//    
-//    public static List<Disciplina> obterDisciplinas() throws ClassNotFoundException, SQLException{
-//        return DisciplinaDao.obterDisciplinas();
-//    }
-//      
-//    public static List<Disciplina> obterDisciplinasPorNome(String nome) throws ClassNotFoundException, SQLException{
-//       return DisciplinaDao.obterDisciplinasPorNome(nome);
-//    }
-//    
-//    public static List<Disciplina> obterDisciplinasPorCursoENome(int codCurso, String nome) throws ClassNotFoundException, SQLException{
-//       return DisciplinaDao.obterDisciplinasPorCursoENome(codCurso,nome);
-//    }
-//    
-//    public static List<Disciplina> obterDisciplinasPorCurso(int codCurso) throws ClassNotFoundException, SQLException{
-//       return DisciplinaDao.obterDisciplinasPorCurso(codCurso);
-//    }
-//    
-//    public static Disciplina obterDisciplina(int codDisciplina) throws ClassNotFoundException, SQLException{
-//        return DisciplinaDao.obterDisciplina(codDisciplina);
-//    }
-//    
-//    public void gravar() throws SQLException, ClassNotFoundException{
-//        DisciplinaDao.gravarDisciplina(this);
-//    }
-//    
-//    public void editar() throws SQLException, ClassNotFoundException{
-//        DisciplinaDao.editarDisciplina(this);
-//    }
-//    
-//    public void excluir() throws SQLException, ClassNotFoundException{
-//        DisciplinaDao.excluirDisciplina(this);
-//    }
+    
+    public static List<Disciplina> obterDisciplinas() throws ClassNotFoundException, SQLException{
+        return DisciplinaDao.obterDisciplinas();
+    }
+      
+    public static List<Disciplina> obterDisciplinasPorNome(String nome) throws ClassNotFoundException, SQLException{
+       return DisciplinaDao.obterDisciplinasPorNome(nome);
+    }
+    
+    public static List<Disciplina> obterDisciplinasPorCursoENome(int codCurso, String nome) throws ClassNotFoundException, SQLException{
+       return DisciplinaDao.obterDisciplinasPorCursoENome(codCurso,nome);
+    }
+    
+    public static List<Disciplina> obterDisciplinasPorCurso(int codCurso) throws ClassNotFoundException, SQLException{
+       return DisciplinaDao.obterDisciplinasPorCurso(codCurso);
+    }
+    
+    public static Disciplina obterDisciplina(int codDisciplina) throws ClassNotFoundException, SQLException{
+        return DisciplinaDao.obterDisciplina(codDisciplina);
+    }
+    
+    public void gravar() throws SQLException, ClassNotFoundException{
+        DisciplinaDao.gravarDisciplina(this);
+    }
+    
+    public void editar() throws SQLException, ClassNotFoundException{
+        DisciplinaDao.editarDisciplina(this);
+    }
+    
+    public void excluir() throws SQLException, ClassNotFoundException{
+        DisciplinaDao.excluirDisciplina(this);
+    }
 }

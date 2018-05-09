@@ -1,5 +1,6 @@
 package model;
 
+import dao.CursoDAO;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.List;
@@ -137,25 +138,24 @@ public class Curso implements java.io.Serializable {
 
     public void setAlunos(Set<Aluno> alunos) {
         this.alunos = alunos;
+    } 
+    public void gravar() throws SQLException, ClassNotFoundException{
+        CursoDAO.gravarCurso(this);
     }
     
-//    public void gravar() throws SQLException, ClassNotFoundException{
-//        CursoDAO.gravarCurso(this);
-//    }
-//    
-//    public void editar() throws SQLException, ClassNotFoundException{
-//        CursoDAO.editarCurso(this);
-//    }
-//    
-//    public void excluir() throws SQLException, ClassNotFoundException{
-//        CursoDAO.excluirCurso(this);
-//    }
-//    
-//    public static List<Curso> obterCursos() throws ClassNotFoundException, SQLException{
-//        return CursoDAO.obterCursos();
-//    }
-//    
-//    public static Curso obterCurso(int codCurso) throws ClassNotFoundException, SQLException{
-//        return CursoDAO.obterCurso(codCurso);
-//    }
+    public void editar() throws SQLException, ClassNotFoundException{
+        CursoDAO.editarCurso(this);
+    }
+    
+    public void excluir() throws SQLException, ClassNotFoundException{
+        CursoDAO.excluirCurso(this);
+    }
+    
+    public static List<Curso> obterCursos() throws ClassNotFoundException, SQLException{
+        return CursoDAO.obterCursos();
+    }
+    
+    public static Curso obterCurso(int codCurso) throws ClassNotFoundException, SQLException{
+        return CursoDAO.obterCurso(codCurso);
+    }
 }

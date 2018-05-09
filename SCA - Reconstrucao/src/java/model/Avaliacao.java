@@ -1,5 +1,6 @@
 package model;
 
+import dao.AvaliacaoDao;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -114,41 +115,41 @@ public class Avaliacao implements java.io.Serializable {
         this.notaProvaFinal = notaProvaFinal;
     }
 
-//    public void excluir() throws SQLException, ClassNotFoundException {
-//        AvaliacaoDao.excluirAvaliacao(this);
-//    }
-//
-//    public void gravar() throws SQLException, ClassNotFoundException {
-//        AvaliacaoDao.gravarAvaliacao(this);
-//    }
-//
-//    public void alterar() throws SQLException, ClassNotFoundException {
-//        AvaliacaoDao.editarAvaliacao(this);
-//    }
-//    
-//    public static List<Avaliacao> obterAvaliacoesPorAluno(int matricula) throws SQLException, ClassNotFoundException {
-//        return AvaliacaoDao.obterAvaliacoesPorAluno(matricula);
-//    }
-//    
-//    public static List<Avaliacao> obterAvaliacoesPorTurma(int codTurma) throws SQLException, ClassNotFoundException {
-//        return AvaliacaoDao.obterAvaliacoesPorTurma(codTurma);
-//    }
-//    
-//    public static Avaliacao obterAvaliacao(AvaliacaoId avaliacaoId) throws SQLException, ClassNotFoundException {
-//        return AvaliacaoDao.obterAvaliacao(avaliacaoId);
-//    }
-//    
-//    public static List<Avaliacao> obterAvaliacoesPorAnoSemestre(int ano, int semestre, int matricula) throws SQLException, ClassNotFoundException {
-//        List<Avaliacao> avaliacoes = AvaliacaoDao.obterAvaliacoesPorAluno(matricula);
-//        List<Avaliacao> avaliacoesParaEnvio = new ArrayList<Avaliacao>();
-//        
-//        for(Avaliacao a: avaliacoes){
-//            if(a.getTurma().getAno() == ano && a.getTurma().getSemestre() == semestre){
-//                avaliacoesParaEnvio.add(a);
-//            }
-//        }
-//        
-//        return avaliacoesParaEnvio;
-//        
-//    }
+    public void excluir() throws SQLException, ClassNotFoundException {
+        AvaliacaoDao.excluirAvaliacao(this);
+    }
+
+    public void gravar() throws SQLException, ClassNotFoundException {
+        AvaliacaoDao.gravarAvaliacao(this);
+    }
+
+    public void alterar() throws SQLException, ClassNotFoundException {
+        AvaliacaoDao.editarAvaliacao(this);
+    }
+    
+    public static List<Avaliacao> obterAvaliacoesPorAluno(int matricula) throws SQLException, ClassNotFoundException {
+        return AvaliacaoDao.obterAvaliacoesPorAluno(matricula);
+    }
+    
+    public static List<Avaliacao> obterAvaliacoesPorTurma(int codTurma) throws SQLException, ClassNotFoundException {
+        return AvaliacaoDao.obterAvaliacoesPorTurma(codTurma);
+    }
+    
+    public static Avaliacao obterAvaliacao(AvaliacaoId avaliacaoId) throws SQLException, ClassNotFoundException {
+        return AvaliacaoDao.obterAvaliacao(avaliacaoId);
+    }
+    
+    public static List<Avaliacao> obterAvaliacoesPorAnoSemestre(int ano, int semestre, int matricula) throws SQLException, ClassNotFoundException {
+        List<Avaliacao> avaliacoes = AvaliacaoDao.obterAvaliacoesPorAluno(matricula);
+        List<Avaliacao> avaliacoesParaEnvio = new ArrayList<Avaliacao>();
+        
+        for(Avaliacao a: avaliacoes){
+            if(a.getTurma().getAno() == ano && a.getTurma().getSemestre() == semestre){
+                avaliacoesParaEnvio.add(a);
+            }
+        }
+        
+        return avaliacoesParaEnvio;
+        
+    }
 }

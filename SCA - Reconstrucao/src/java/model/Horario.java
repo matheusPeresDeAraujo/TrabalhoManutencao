@@ -1,5 +1,6 @@
 package model;
 
+import dao.HorarioDAO;
 import java.sql.SQLException;
 import java.util.List;
 import javax.persistence.Column;
@@ -72,21 +73,21 @@ public class Horario implements java.io.Serializable {
     public void setHorarioInicio(String horarioInicio) {
         this.horarioInicio = horarioInicio;
     }
-//    
-//    public void excluir() throws SQLException, ClassNotFoundException{
-//        this.setTurma(null);
-//        HorarioDAO.excluirHorario(this);
-//    }
-//    
-//    public void gravar() throws SQLException, ClassNotFoundException{
-//        HorarioDAO.gravarHorario(this);
-//    }
-//    
-//    public void alterar() throws SQLException, ClassNotFoundException{
-//        HorarioDAO.editarHorario(this);
-//    }
-//    
-//    public static List<Horario> obterHorariosPorTurma(int codTurma) throws SQLException, ClassNotFoundException{
-//        return HorarioDAO.obterHorariosPorTurma(codTurma);
-//    }
+    
+    public void excluir() throws SQLException, ClassNotFoundException{
+        this.setTurma(null);
+        HorarioDAO.excluirHorario(this);
+    }
+    
+    public void gravar() throws SQLException, ClassNotFoundException{
+        HorarioDAO.gravarHorario(this);
+    }
+    
+    public void alterar() throws SQLException, ClassNotFoundException{
+        HorarioDAO.editarHorario(this);
+    }
+    
+    public static List<Horario> obterHorariosPorTurma(int codTurma) throws SQLException, ClassNotFoundException{
+        return HorarioDAO.obterHorariosPorTurma(codTurma);
+    }
 }

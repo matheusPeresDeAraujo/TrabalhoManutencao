@@ -1,5 +1,6 @@
 package model;
 
+import dao.ProfessorDAO;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.HashSet;
@@ -231,28 +232,28 @@ public class Professor implements java.io.Serializable {
     public void setTurmas(Set<Turma> turmas) {
         this.turmas = turmas;
     }
-//    
-//    public void gravar() throws SQLException, ClassNotFoundException{
-//        ProfessorDAO.gravarProfessor(this);
-//    }
-//    
-//    public void editar() throws SQLException, ClassNotFoundException{
-//        ProfessorDAO.editarProfessor(this);
-//    }
-//    
-//    public void excluir() throws SQLException, ClassNotFoundException{
-//        ProfessorDAO.excluirProfessor(this);
-//    }
-//    
-//    public static Professor obterProfessor(int matricula) throws ClassNotFoundException, SQLException{
-//        return ProfessorDAO.obterProfessor(matricula);
-//    }
-//    
-//    public static List<Professor> obterProfessores() throws ClassNotFoundException, SQLException{
-//        return ProfessorDAO.obterProfessores();
-//    }
-//    
-//    public static List<Professor> obterProfessoresPorNome(String nomeProfessor) throws ClassNotFoundException, SQLException{
-//        return ProfessorDAO.obterProfessoresPorNome(nomeProfessor);
-//    }
+    
+    public void gravar() throws SQLException, ClassNotFoundException{
+        ProfessorDAO.gravarProfessor(this);
+    }
+    
+    public void editar() throws SQLException, ClassNotFoundException{
+        ProfessorDAO.editarProfessor(this);
+    }
+    
+    public void excluir() throws SQLException, ClassNotFoundException{
+        ProfessorDAO.excluirProfessor(this);
+    }
+    
+    public static Professor obterProfessor(int matricula) throws ClassNotFoundException, SQLException{
+        return ProfessorDAO.obterProfessor(matricula);
+    }
+    
+    public static List<Professor> obterProfessores() throws ClassNotFoundException, SQLException{
+        return ProfessorDAO.obterProfessores();
+    }
+    
+    public static List<Professor> obterProfessoresPorNome(String nomeProfessor) throws ClassNotFoundException, SQLException{
+        return ProfessorDAO.obterProfessoresPorNome(nomeProfessor);
+    }
 }
