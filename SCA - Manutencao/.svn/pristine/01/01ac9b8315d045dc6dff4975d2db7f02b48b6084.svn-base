@@ -1,0 +1,135 @@
+<%-- 
+    Document   : pesquisarMatrizCurricular
+    Created on : 27/11/2012, 08:14:23
+    Author     : Heleno
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pesquisar Matriz Curricular</title>
+    </head>
+    <body>
+        <h1>Pesquisar Matriz Curricular</h1>
+        <form action="pesquisarMatrizCurricular.jsp">
+            <fieldset style="width: 60%">
+                <legend>Filtrar por:</legend>
+                <table>
+                    <tr>
+                        <td>
+                            Curso
+                        </td>
+
+                        <td>
+                            <select id="curso" name="curso">
+                                <option>
+                                    Todos
+                                </option>
+                            </select>
+                        </td>
+
+                        <td>
+                            Ano
+                        </td>
+
+                        <td>
+                            <input type="text" id="ano" name="ano"/>
+                        </td>
+                        
+                         <td>
+                            Semestre
+                        </td>
+
+                        <td>
+                            <input type="text" id="semestre" name="semestre"/>
+                        </td>
+
+                        <td>
+                            Período
+                        </td>
+
+                        <td>
+                            <select id="periodo" name="periodo">
+                            <option value="1">
+                                1
+                            </option>
+                            
+                            <option value="2">
+                                2
+                            </option>
+                            
+                            <option value="3">
+                                3
+                            </option>
+                            
+                            <option value="4">
+                                4
+                            </option>
+                            
+                            <option value="5">
+                                5
+                            </option>
+                            
+                            <option value="6">
+                                6
+                            </option>
+                            
+                            <option value="7">
+                                7
+                            </option>
+                            
+                            <option value="8">
+                                8
+                            </option>
+                            
+                            <option value="9">
+                                9
+                            </option>
+                            
+                            <option value="10">
+                                10
+                            </option>
+                        </select>
+                        </td>
+                        
+                        <td>
+                            <input type="submit" id="Pesquisar" value="Pesquisar"/>
+                        </td>
+
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <br/>
+        <table border="1">
+            <tr>
+                <th>
+                    Disciplina
+                </th>
+                
+                <th>
+                    Período
+                </th>
+                
+                <th>
+                    Ano/Semestre
+                </th>
+                
+                <th>
+                    Ementa
+                </th>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                              
+                <td>
+                    <input type="button" id="voltar" value="Voltar" onClick="history.go(-1)"/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

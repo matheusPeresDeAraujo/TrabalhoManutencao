@@ -1,0 +1,151 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Consultar Notas e Frequencia</title>
+    </head>
+    <body>
+        <h1>Consultar Notas e Frequencia</h1>
+        
+        <table>
+            <tr>
+                <td>
+                    Aluno:
+                </td>
+                
+                <td>
+                    
+                </td>    
+            </tr>
+            
+            <tr>
+                <td>
+                    Listar:
+                </td>
+                
+                <td>
+                    <input type="radio" id="filtro" value="Todas">Todas
+                </td>
+                
+                <td>
+                    <input type="radio" id="filtro" value="Ano/Semestre">Ano/Semestre
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Ano:
+                </td>
+                
+                <td>
+                    <select>
+                        <option value="2012">
+                            2012
+                        </option>
+                    </select>
+                </td>
+                
+                <td>
+                    Semestre:
+                </td>
+                
+                <td>
+                    <select id="periodo" name="periodo">
+                            <option value="1">
+                                1
+                            </option>
+                            
+                            <option value="2">
+                                2
+                            </option>
+                            
+                            <option value="3">
+                                3
+                            </option>
+                            
+                            <option value="4">
+                                4
+                            </option>
+                            
+                            <option value="5">
+                                5
+                            </option>
+                            
+                            <option value="6">
+                                6
+                            </option>
+                            
+                            <option value="7">
+                                7
+                            </option>
+                            
+                            <option value="8">
+                                8
+                            </option>
+                            
+                            <option value="9">
+                                9
+                            </option>
+                            
+                            <option value="10">
+                                10
+                            </option>
+                       </select>
+                </td>
+            </tr>
+            
+            <tr>
+                    <td align="left" colspan="2">
+                        <input type="button" id="voltar" name="voltar" value="Voltar" onClick="history.go(-1)"/>
+                    </td>
+                    
+                    <td align="right" colspan="2">
+                        <input type="button" id="consultar" name="consultar" value="Consultar"/>
+                    </td>
+            </tr>
+        </table>
+        
+        <table border="1">
+            <tr>
+                <th>
+                    Cod. Disciplina
+                </th>
+                
+                <th>
+                    Periodo
+                </th>
+                
+                <th>
+                    Disciplina
+                </th>
+                
+                <th>
+                    Frequencia
+                </th>
+                
+                <th>
+                    Nota 1
+                </th>
+                
+                <th>
+                    Nota 2
+                </th>
+                
+                <th>
+                    Nota Prova Final
+                </th>
+                
+                <th>
+                    Media Final
+                </th>
+                
+                <th>
+                    Resultado Final
+                </th>
+                    
+                    
+            </tr>
+        </table>
+    </body>
+</html>

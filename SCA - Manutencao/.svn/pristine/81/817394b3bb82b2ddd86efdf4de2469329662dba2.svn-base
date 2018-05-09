@@ -1,0 +1,86 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Efetuar Matricula</title>
+    </head>
+    <body>
+        <h1>Efetuar Matricula</h1>
+        
+        <table>
+            <tr>
+                <td>
+                    Nome:
+                </td>
+                
+                <td>
+                    
+                </td>
+                
+                <td>
+                    Matricula:
+                </td>
+                
+                <td>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Curso:
+                </td>
+                
+                <td>
+                    
+                </td>
+                
+                <td>
+                    Ano
+                </td>
+                
+                <td>
+                    
+                </td>
+                
+                <td>
+                    Semestre
+                </td>
+                
+                <td>
+                    
+                </td>
+            </tr>
+        </table>
+        
+        <table border="1">
+            <tr>
+                <th>
+                    
+                </th>
+                
+                <th>
+                    Disciplinas
+                </th>
+                
+                <th>
+                    Horário
+                </th>    
+            </tr>
+        </table>
+        
+        
+        <table>
+        <tr>
+                    <td align="left" colspan="3">
+                        <input type="button" id="voltar" name="voltar" value="Voltar" onClick="history.go(-1)"/>
+                    </td>
+                    
+                    <td align="right" colspan="3">
+                        <input type="button" id="confirmar" name="confirmar" value="Confirmar"/>
+                    </td>
+            </tr>
+        </table>
+    </body>
+</html>

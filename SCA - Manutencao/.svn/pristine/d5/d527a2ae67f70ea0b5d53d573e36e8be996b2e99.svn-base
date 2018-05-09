@@ -1,0 +1,126 @@
+<%-- 
+    Document   : manterNotasEFrequencia
+    Created on : 26/11/2012, 20:31:14
+    Author     : Heleno
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Manter Notas e Frequencia</title>
+    </head>
+    <body>
+        <h1>Manter Notas e Frequencia</h1>
+        
+        <table>
+            <tr>
+                <td>
+                    Professor:
+                </td>
+                
+                <td>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Disciplina:
+                </td>
+                
+                <td>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Ano:
+                </td>
+                
+                <td>
+                    
+                </td>
+                
+                <td>
+                    Semestre:
+                </td>
+                
+                <td>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    Sala:
+                </td>
+                
+                <td>
+                    
+                </td>
+            </tr>
+       </table>
+        
+        <table>
+            <tr>
+                <td>
+                    Horario(s)
+                </td>
+            </tr>
+            
+            
+        </table>
+        
+        <table border="1">
+            <tr>
+                <th>
+                    Matricula
+                </th>
+                
+                <th>
+                    Nome do Aluno
+                </th>
+                
+                <th>
+                    Frequencia
+                </th>
+                
+                <th>
+                    Nota 1
+                </th>
+                
+                <th>
+                    Nota 2
+                </th>
+                
+                <th>
+                    Nota Final
+                </th>
+                
+                <th>
+                    Media
+                </th>
+                
+                <th>
+                    Resultado Final
+                </th>
+            </tr>
+        </table>
+         <table>
+            <tr>
+                              
+                <td>
+                    <input type="button" id="voltar" value="Voltar" onClick="history.go(-1)"/>
+                </td>
+                
+                <td>
+                     <input type="submit" value="Calcular Resultado Final">
+                </td>
+            </tr>
+        </table>
+       
+    </body>
+</html>

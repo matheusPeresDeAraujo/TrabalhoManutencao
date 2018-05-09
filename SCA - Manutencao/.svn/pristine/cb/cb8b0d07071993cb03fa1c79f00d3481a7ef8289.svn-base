@@ -1,0 +1,91 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Pesquisar Aluno</title>
+    </head>
+    <body>
+        <h1>Pesquisar Aluno</h1>
+        
+        <form action="PesquisarAlunoController" method="post">
+            <fieldset style="width: 50%">
+                <legend>Pesquisar por:</legend>
+                <table>
+                    <tr>
+                        <td>
+                            Nome
+                        </td>
+
+                        <td>
+                            <input type="text" id="nome" name="busca"/>
+                        </td>
+
+                        <td>
+                            <input type="submit" id="Pesquisar" value="Pesquisar"/>
+                        </td>
+
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <br/>
+        <table border="1">
+            <tr>
+                <th>
+                    Matrícula
+                </th>
+                
+                <th>
+                    Nome do Aluno
+                </th>
+                
+                <th>
+                    Ações
+                </th>
+            </tr>
+            
+             <c:if test="${empty alunos}">
+                <tr>
+                    <td colspan="3" align="center">
+                        Nenhum resultado encontrado
+                    </td>
+                </tr>
+            </c:if>
+                
+            <c:forEach items="${alunos}" var="aluno">
+                <tr>
+                    <td>
+                        ${aluno.matricula}
+                    </td>
+                    
+                    <td>
+                        ${aluno.nome}
+                    </td>
+                    
+                    <td>
+                        <a href="ManterAlunoController?acao=prepararOperacao&operacao=editar&matricula=${aluno.matricula}">Alterar</a>
+                        <a href="ManterAlunoController?acao=prepararOperacao&operacao=excluir&matricula=${aluno.matricula}">Excluir</a>
+                    </td>
+                    
+                </tr>
+            </c:forEach>
+        </table>
+        
+        <table>
+            <tr>
+                               
+                <td>
+                    <input type="button" id="voltar" value="Voltar" onClick="history.go(-1)"/>
+                </td>
+                
+                <td>
+                    <form action="ManterAlunoController?acao=prepararOperacao&operacao=incluir" method="post">
+                        <input type="submit" id="incluiNovo" value="Incluir Novo"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
