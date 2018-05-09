@@ -1,6 +1,4 @@
 package model;
-// Generated 27/05/2013 11:14:03 by Hibernate Tools 3.2.1.GA
-
 import dao.TurmaDAO;
 import java.sql.SQLException;
 import java.util.HashSet;
@@ -19,7 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "turma", catalog = "sca")
+@Table(name = "turma")
 public class Turma implements java.io.Serializable {
 
     private Integer codTurma;
