@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Pesquisar Nota Frequência</h1>
-        <form action="PesquisarNotaFrequenciaController?acao=confirmarOperacao" method="post" name="frmPesquisarNotaFrequencia">
+        <form action="FrontController?action=PesquisarNotaFrequencia&acao=confirmarOperacao" method="post" name="frmPesquisarNotaFrequencia">
             <table>
                 <tr>
                     <td>Professor:</td> 

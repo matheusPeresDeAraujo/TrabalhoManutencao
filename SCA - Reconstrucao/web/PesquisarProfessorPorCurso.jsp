@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Pesquisar Professor Por Curso</h1>
-        <form action="PesquisarProfessorPorCursoController?acao=confirmarOperacao" method="post" name="PesquisarProfessorPorCurso">
+        <form action="FrontController?action=PesquisarProfessorPorCurso&acao=confirmarOperacao" method="post" name="PesquisarProfessorPorCurso">
             <table>
                 <tr>
                     <td>Curso:</td> 
@@ -55,7 +55,7 @@
                                             ${professor.nome}
                                         </td>
                                         <td>
-                                            <a href="ManterProfessorController?acao=prepararOperacao&operacao=Editar&matricula=<c:out value="${professor.matricula}"/>">Editar</a>
+                                            <a href="FrontController?action=ManterProfessor&acao=prepararOperacao&operacao=Editar&matricula=<c:out value="${professor.matricula}"/>">Editar</a>
                                         </td>
                                     </tr>
                                 </c:forEach>

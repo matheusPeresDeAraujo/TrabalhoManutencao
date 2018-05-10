@@ -11,7 +11,7 @@
 
         <h1>MANTER HORARIOS</h1>
 
-        <form action="ManterHorariosController?acao=confirmarOperacao&operacao=${operacao}" method="post" name="frmManterHorarios" onsubmit="return verificaHorarios(this)" >
+        <form action="FrontController?action=ManterHorarios&acao=confirmarOperacao&operacao=${operacao}" method="post" name="frmManterHorarios" onsubmit="return verificaHorarios(this)" >
             <table>
                 <tr>
                     <td> Código da Turma: </td>

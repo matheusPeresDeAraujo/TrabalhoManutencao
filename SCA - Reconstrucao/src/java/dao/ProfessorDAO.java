@@ -12,6 +12,7 @@ public class ProfessorDAO {
         Transaction transaction = session.beginTransaction();
         session.save(professor);
         transaction.commit();
+        session.close();
     }
     
      public static void excluirProfessor(Professor professor) throws SQLException, ClassNotFoundException{
@@ -19,12 +20,14 @@ public class ProfessorDAO {
         Transaction transaction = session.beginTransaction();
         session.delete(professor);
         transaction.commit();
+        session.close();
     }
     
     public static List<Professor> obterProfessores() throws ClassNotFoundException, SQLException{
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<Professor> professores = session.createCriteria(Professor.class).list();
+        session.close();
         return professores;
     }
     
@@ -32,6 +35,7 @@ public class ProfessorDAO {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<Professor> professores = session.createQuery("from Professor where nome like'%"+nomeProfessor+"%'").list();
+        session.close();
         return professores;
     }
     
@@ -39,6 +43,7 @@ public class ProfessorDAO {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         Professor professor = (Professor) session.load(Professor.class, matricula);
+        session.close();
         return professor;
     }
     
@@ -47,8 +52,6 @@ public class ProfessorDAO {
         Transaction transaction = session.beginTransaction();
         session.update(professor);
         transaction.commit();
-    }
-    
-    
-    
+        session.close();
+    } 
 }

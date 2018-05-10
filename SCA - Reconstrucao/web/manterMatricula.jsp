@@ -11,7 +11,7 @@
 
         <h1>EFETUAR MATRÍCULA - ${operacao}</h1>
 
-        <form  method="post" action="ManterMatriculaController?acao=confirmarOperacao&operacao=${operacao}" name="frmManterMatricula" onsubmit="return verificaHorarios(this)">
+        <form  method="post" action="FrontController?action=ManterMatricula&acao=confirmarOperacao&operacao=${operacao}" name="frmManterMatricula" onsubmit="return verificaHorarios(this)">
             <table>
                 <tr>
                     <td>Matrícula</td>

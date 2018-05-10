@@ -13,7 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="ManterDisciplinaController?acao=confirmarOperacao&operacao=${operacao}" method="post" onSubmit="return validarFormulario(this)">
+        <form action="FrontController?action=ManterDisciplina&acao=confirmarOperacao&operacao=${operacao}" method="post" onSubmit="return validarFormulario(this)">
             
             <table>
                 <tr>

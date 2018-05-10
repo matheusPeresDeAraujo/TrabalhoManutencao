@@ -15,7 +15,7 @@
     <body>
         <h1>Pesquisar Professor</h1>
         
-        <form action="PesquisarProfessorController" method="post">
+        <form action="FrontController?action=PesquisarProfessor" method="post">
             <fieldset style="width: 50%">
                 <legend>Pesquisar por:</legend>
                 <table>

@@ -14,7 +14,7 @@
     </head>
     <body>
         
-        <form action="manterCursoController?acao=confirmarOperacao&operacao=${operacao}" method="post" onSubmit="return validarFormulario(this)">
+        <form action="FrontController?action=manterCursoController&acao=confirmarOperacao&operacao=${operacao}" method="post" onSubmit="return validarFormulario(this)">
      
                        
             <table>

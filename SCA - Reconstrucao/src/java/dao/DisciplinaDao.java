@@ -19,6 +19,7 @@ public class DisciplinaDao {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<Disciplina> disciplinas = session.createQuery("from Disciplina where nome like'%"+nome+"%'").list();
+        session.close();
         return disciplinas;
     }
     
@@ -26,6 +27,7 @@ public class DisciplinaDao {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<Disciplina> disciplinas = session.createQuery("from Disciplina where nome like'%"+nome+"%' and codCurso="+codCurso).list();
+        session.close();
         return disciplinas;
     }
     
@@ -33,6 +35,7 @@ public class DisciplinaDao {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         List<Disciplina> disciplinas = session.createQuery("from Disciplina where codCurso="+codCurso).list();
+        session.close();
         return disciplinas;
     }
     
@@ -40,6 +43,7 @@ public class DisciplinaDao {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
         session.beginTransaction();
         Disciplina disciplina = (Disciplina) session.load(Disciplina.class, codDisciplina);
+        session.close();
         return disciplina;
     }
     
@@ -48,6 +52,7 @@ public class DisciplinaDao {
         Transaction transaction = session.beginTransaction();
         session.save(disciplina);
         transaction.commit();
+        session.close();
     }
     
     public static void editarDisciplina(Disciplina disciplina) throws SQLException, ClassNotFoundException{
@@ -55,6 +60,7 @@ public class DisciplinaDao {
         Transaction transaction = session.beginTransaction();
         session.update(disciplina);
         transaction.commit();
+        session.close();
     }
     
     public static void excluirDisciplina(Disciplina disciplina) throws SQLException, ClassNotFoundException{
@@ -62,5 +68,6 @@ public class DisciplinaDao {
         Transaction transaction = session.beginTransaction();
         session.delete(disciplina);
         transaction.commit();
+        session.close();
     }
 }
